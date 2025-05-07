@@ -1,0 +1,132 @@
+/**
+ * 隐私政策配置文件
+ *
+ * 此文件包含隐私政策页面的详细信息。
+ * 在实际应用中，这些信息可以通过API动态获取并覆盖这些默认值。
+ */
+
+export interface PrivacyPolicy {
+  lastUpdated: string
+  sections: {
+    title: {
+      en: string
+      zh: string
+    }
+    content: {
+      en: string
+      zh: string
+    }
+  }[]
+  dataUsagePoints: {
+    en: string[]
+    zh: string[]
+  }
+  contactEmail: string
+}
+
+export const privacyPolicy: PrivacyPolicy = {
+  lastUpdated: "2023-09-01",
+  sections: [
+    {
+      title: {
+        en: "Introduction",
+        zh: "介绍",
+      },
+      content: {
+        en: "At Big Data Technologies Navigator, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.",
+        zh: "在大数据技术导航，我们尊重您的隐私并致力于保护您的个人数据。本隐私政策将告知您我们在您访问我们的网站时如何照顾您的个人数据，并告诉您关于您的隐私权以及法律如何保护您。",
+      },
+    },
+    {
+      title: {
+        en: "Information We Collect",
+        zh: "我们收集的信息",
+      },
+      content: {
+        en: "We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:",
+        zh: "我们可能收集、使用、存储和传输不同类型的关于您的个人数据，我们将其分组如下：",
+      },
+    },
+    {
+      title: {
+        en: "Technical Data",
+        zh: "技术数据",
+      },
+      content: {
+        en: "This includes your IP address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.",
+        zh: "这包括您的IP地址、浏览器类型和版本、时区设置和位置、浏览器插件类型和版本、操作系统和平台，以及您用于访问本网站的设备上的其他技术。",
+      },
+    },
+    {
+      title: {
+        en: "Usage Data",
+        zh: "使用数据",
+      },
+      content: {
+        en: "This includes information about how you use our website, products, and services.",
+        zh: "这包括有关您如何使用我们的网站、产品和服务的信息。",
+      },
+    },
+    {
+      title: {
+        en: "How We Use Your Data",
+        zh: "我们如何使用您的数据",
+      },
+      content: {
+        en: "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:",
+        zh: "我们只会在法律允许的情况下使用您的个人数据。最常见的是，我们将在以下情况下使用您的个人数据：",
+      },
+    },
+    {
+      title: {
+        en: "Cookies",
+        zh: "Cookies",
+      },
+      content: {
+        en: "We use cookies and similar tracking technologies to track the activity on our service and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.",
+        zh: "我们使用cookies和类似的跟踪技术来跟踪我们服务上的活动并保存某些信息。Cookies是包含少量数据的文件，可能包括匿名唯一标识符。",
+      },
+    },
+    {
+      title: {
+        en: "Third-Party Links",
+        zh: "第三方链接",
+      },
+      content: {
+        en: "Our website may include links to third-party websites, plug-ins, and applications. Clicking on those links or enabling those connections may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy statements.",
+        zh: "我们的网站可能包含指向第三方网站、插件和应用程序的链接。点击这些链接或启用这些连接可能允许第三方收集或共享有关您的数据。我们不控制这些第三方网站，也不对其隐私声明负责。",
+      },
+    },
+    {
+      title: {
+        en: "Your Data Rights",
+        zh: "您的数据权利",
+      },
+      content: {
+        en: "Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to request access, correction, erasure, restriction, transfer, or to object to processing.",
+        zh: "在某些情况下，您根据数据保护法对您的个人数据拥有权利，包括请求访问、更正、删除、限制、传输或反对处理的权利。",
+      },
+    },
+  ],
+  dataUsagePoints: {
+    en: [
+      "To provide and maintain our service",
+      "To notify you about changes to our service",
+      "To allow you to participate in interactive features of our service when you choose to do so",
+      "To provide customer support",
+      "To gather analysis or valuable information so that we can improve our service",
+      "To monitor the usage of our service",
+      "To detect, prevent and address technical issues",
+    ],
+    zh: [
+      "提供和维护我们的服务",
+      "通知您有关我们服务的变更",
+      "允许您在选择时参与我们服务的互动功能",
+      "提供客户支持",
+      "收集分析或有价值的信息，以便我们改进我们的服务",
+      "监控我们服务的使用情况",
+      "检测、预防和解决技术问题",
+    ],
+  },
+  contactEmail: "privacy@bigdatatechnologies.com",
+}
