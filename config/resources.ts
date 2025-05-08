@@ -212,7 +212,7 @@ export const resources: Resource[] = [
           en: "Video series on Apache Kafka fundamentals",
           zh: "Apache Kafka 基础视频系列",
         },
-        link: "https://www.youtube.com/c/ApacheKafka",
+        link: "https://www.youtube.com/@confluentinc",
         icon: "Video",
       },
       {
@@ -224,7 +224,7 @@ export const resources: Resource[] = [
           en: "Video tutorials for Elasticsearch",
           zh: "Elasticsearch 视频教程",
         },
-        link: "https://www.elastic.co/videos/",
+        link: "https://www.elastic.co/resources/videos/",
         icon: "Video",
       },
       {
@@ -236,7 +236,7 @@ export const resources: Resource[] = [
           en: "Conference videos on Apache Flink",
           zh: "Apache Flink 会议视频",
         },
-        link: "https://www.youtube.com/c/ApacheFlinkForward",
+        link: "https://www.youtube.com/@ApacheFlink",
         icon: "Video",
       },
       {
@@ -248,7 +248,7 @@ export const resources: Resource[] = [
           en: "Recorded ClickHouse meetups and presentations",
           zh: "ClickHouse 线下聚会和演示录像",
         },
-        link: "https://www.youtube.com/c/ClickHouseDB",
+        link: "https://www.youtube.com/@ClickHouseDB",
         icon: "Video",
       },
       {
@@ -260,7 +260,7 @@ export const resources: Resource[] = [
           en: "Video overview of the Elastic Stack (Elasticsearch, Logstash, Kibana)",
           zh: "Elastic Stack (Elasticsearch, Logstash, Kibana) 视频概览",
         },
-        link: "https://www.elastic.co/videos/",
+        link: "https://www.elastic.co/resources/videos/",
         icon: "Video",
       },
       {
@@ -272,7 +272,7 @@ export const resources: Resource[] = [
           en: "Video demonstrations of Apache Superset",
           zh: "Apache Superset 视频演示",
         },
-        link: "https://www.youtube.com/c/ApacheSuperset",
+        link: "https://www.youtube.com/@TheApacheFoundation",
         icon: "Video",
       },
     ],
