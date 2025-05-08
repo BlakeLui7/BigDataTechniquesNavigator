@@ -36,12 +36,7 @@ export const versionHistories: VersionConfig = {
           "Faster performance optimizations",
           "Improved scalability for large clusters",
         ],
-        zh: [
-          "KRaft模式作为默认配置",
-          "引入队列功能",
-          "更快的性能优化",
-          "改进大型集群的可扩展性",
-        ],
+        zh: ["KRaft模式作为默认配置", "引入队列功能", "更快的性能优化", "改进大型集群的可扩展性"],
       },
     },
     {
@@ -57,12 +52,7 @@ export const versionHistories: VersionConfig = {
           "New metrics and monitoring features",
           "Advanced security enhancements",
         ],
-        zh: [
-          "增强的分层存储功能",
-          "改进的KRaft模式稳定性",
-          "新的指标和监控功能",
-          "高级安全增强",
-        ],
+        zh: ["增强的分层存储功能", "改进的KRaft模式稳定性", "新的指标和监控功能", "高级安全增强"],
       },
     },
     {
@@ -78,12 +68,7 @@ export const versionHistories: VersionConfig = {
           "Improved cluster balancing algorithms",
           "New client protocol features",
         ],
-        zh: [
-          "主题数据的分层存储",
-          "增强的KRaft模式性能",
-          "改进的集群平衡算法",
-          "新的客户端协议功能",
-        ],
+        zh: ["主题数据的分层存储", "增强的KRaft模式性能", "改进的集群平衡算法", "新的客户端协议功能"],
       },
     },
     {
@@ -160,12 +145,7 @@ export const versionHistories: VersionConfig = {
           "Enhanced cross-cluster replication",
           "New observability features",
         ],
-        zh: [
-          "改进的向量数据库功能",
-          "先进的AI驱动搜索功能",
-          "增强的跨集群复制",
-          "新的可观察性功能",
-        ],
+        zh: ["改进的向量数据库功能", "先进的AI驱动搜索功能", "增强的跨集群复制", "新的可观察性功能"],
       },
     },
     {
@@ -181,12 +161,7 @@ export const versionHistories: VersionConfig = {
           "Improved distributed search performance",
           "New data visualization features",
         ],
-        zh: [
-          "高级向量搜索优化",
-          "增强的机器学习能力",
-          "改进的分布式搜索性能",
-          "新的数据可视化功能",
-        ],
+        zh: ["高级向量搜索优化", "增强的机器学习能力", "改进的分布式搜索性能", "新的数据可视化功能"],
       },
     },
     {
@@ -202,12 +177,7 @@ export const versionHistories: VersionConfig = {
           "New aggregation types",
           "Enhanced security features",
         ],
-        zh: [
-          "向量搜索增强",
-          "改进的语义搜索功能",
-          "新的聚合类型",
-          "增强的安全功能",
-        ],
+        zh: ["向量搜索增强", "改进的语义搜索功能", "新的聚合类型", "增强的安全功能"],
       },
     },
     {
@@ -284,12 +254,7 @@ export const versionHistories: VersionConfig = {
           "Enhanced SQL capabilities",
           "Improved Python API with AI integration",
         ],
-        zh: [
-          "统一的流处理架构",
-          "原生Kubernetes操作符",
-          "增强的SQL功能",
-          "改进的Python API与AI集成",
-        ],
+        zh: ["统一的流处理架构", "原生Kubernetes操作符", "增强的SQL功能", "改进的Python API与AI集成"],
       },
     },
     {
@@ -305,12 +270,7 @@ export const versionHistories: VersionConfig = {
           "Enhanced state management capabilities",
           "Better cloud-native integration",
         ],
-        zh: [
-          "高级流式SQL增强",
-          "改进的Python API生态系统",
-          "增强的状态管理能力",
-          "更好的云原生集成",
-        ],
+        zh: ["高级流式SQL增强", "改进的Python API生态系统", "增强的状态管理能力", "更好的云原生集成"],
       },
     },
     {
@@ -408,12 +368,7 @@ export const versionHistories: VersionConfig = {
           "Improved pipeline performance",
           "Enhanced cloud-native features",
         ],
-        zh: [
-          "与Elastic Stack 9.0无缝集成",
-          "高级数据转换功能",
-          "改进的管道性能",
-          "增强的云原生功能",
-        ],
+        zh: ["与Elastic Stack 9.0无缝集成", "高级数据转换功能", "改进的管道性能", "增强的云原生功能"],
       },
     },
     {
@@ -429,12 +384,7 @@ export const versionHistories: VersionConfig = {
           "Improved pipeline resilience",
           "New input and output plugins",
         ],
-        zh: [
-          "高级数据处理能力",
-          "增强的云集成功能",
-          "改进的管道弹性",
-          "新的输入和输出插件",
-        ],
+        zh: ["高级数据处理能力", "增强的云集成功能", "改进的管道弹性", "新的输入和输出插件"],
       },
     },
     {
@@ -450,12 +400,7 @@ export const versionHistories: VersionConfig = {
           "Improved pipeline monitoring",
           "Better error handling",
         ],
-        zh: [
-          "增强的数据处理能力",
-          "新的过滤器插件",
-          "改进的管道监控",
-          "更好的错误处理",
-        ],
+        zh: ["增强的数据处理能力", "新的过滤器插件", "改进的管道监控", "更好的错误处理"],
       },
     },
     {
@@ -522,12 +467,7 @@ export const versionHistories: VersionConfig = {
           "Enhanced data visualization capabilities",
           "Improved observability features",
         ],
-        zh: [
-          "重新设计的用户界面",
-          "先进的AI驱动分析",
-          "增强的数据可视化功能",
-          "改进的可观察性功能",
-        ],
+        zh: ["重新设计的用户界面", "先进的AI驱动分析", "增强的数据可视化功能", "改进的可观察性功能"],
       },
     },
     {
@@ -543,12 +483,7 @@ export const versionHistories: VersionConfig = {
           "Enhanced dashboard collaboration",
           "Improved observability features",
         ],
-        zh: [
-          "AI辅助数据探索",
-          "高级可视化功能",
-          "增强的仪表板协作",
-          "改进的可观察性功能",
-        ],
+        zh: ["AI辅助数据探索", "高级可视化功能", "增强的仪表板协作", "改进的可观察性功能"],
       },
     },
     {
@@ -564,12 +499,7 @@ export const versionHistories: VersionConfig = {
           "Better observability tools",
           "Advanced security controls",
         ],
-        zh: [
-          "增强的可视化功能",
-          "改进的仪表板功能",
-          "更好的可观察性工具",
-          "高级安全控制",
-        ],
+        zh: ["增强的可视化功能", "改进的仪表板功能", "更好的可观察性工具", "高级安全控制"],
       },
     },
     {
@@ -646,12 +576,7 @@ export const versionHistories: VersionConfig = {
           "Enhanced columnar storage engine",
           "Better integration with data lakes",
         ],
-        zh: [
-          "高级向量搜索功能",
-          "改进的分布式查询执行",
-          "增强的列式存储引擎",
-          "更好的数据湖集成",
-        ],
+        zh: ["高级向量搜索功能", "改进的分布式查询执行", "增强的列式存储引擎", "更好的数据湖集成"],
       },
     },
     {
@@ -667,12 +592,7 @@ export const versionHistories: VersionConfig = {
           "Advanced materialized views",
           "New storage compression algorithms",
         ],
-        zh: [
-          "增强的向量搜索优化",
-          "改进的分布式连接",
-          "高级物化视图",
-          "新的存储压缩算法",
-        ],
+        zh: ["增强的向量搜索优化", "改进的分布式连接", "高级物化视图", "新的存储压缩算法"],
       },
     },
     {
@@ -688,12 +608,7 @@ export const versionHistories: VersionConfig = {
           "Improved storage efficiency",
           "Better cloud integration",
         ],
-        zh: [
-          "初始向量搜索支持",
-          "增强的分布式查询规划",
-          "改进的存储效率",
-          "更好的云集成",
-        ],
+        zh: ["初始向量搜索支持", "增强的分布式查询规划", "改进的存储效率", "更好的云集成"],
       },
     },
     {
@@ -775,12 +690,7 @@ export const versionHistories: VersionConfig = {
           "Enhanced dashboard collaboration",
           "Improved data source connectivity",
         ],
-        zh: [
-          "AI驱动的数据洞察",
-          "高级可视化库",
-          "增强的仪表板协作",
-          "改进的数据源连接性",
-        ],
+        zh: ["AI驱动的数据洞察", "高级可视化库", "增强的仪表板协作", "改进的数据源连接性"],
       },
     },
     {
@@ -796,12 +706,7 @@ export const versionHistories: VersionConfig = {
           "Improved dashboard sharing",
           "Better data source management",
         ],
-        zh: [
-          "初始AI辅助分析",
-          "增强的可视化功能",
-          "改进的仪表板共享",
-          "更好的数据源管理",
-        ],
+        zh: ["初始AI辅助分析", "增强的可视化功能", "改进的仪表板共享", "更好的数据源管理"],
       },
     },
     {

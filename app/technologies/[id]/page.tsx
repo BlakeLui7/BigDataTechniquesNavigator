@@ -91,12 +91,11 @@ export default function TechnologyPage() {
         </Link>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mt-4">
           <div className="flex items-center gap-3">
-            {IconComponent && <IconComponent className="h-8 w-8 text-primary" />}
+            {IconComponent && <IconComponent className="h-8 w-8 text-neutral-500" />}
             <h1 className="text-3xl font-bold tracking-tight">{tech.name}</h1>
             <Badge
-              variant={
-                tech.category === "collection" ? "default" : tech.category === "processing" ? "secondary" : "outline"
-              }
+              variant="outline"
+              className="bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 border-neutral-200 dark:border-neutral-700"
             >
               {getCategoryName(tech.category)}
             </Badge>
@@ -178,7 +177,7 @@ export default function TechnologyPage() {
                   <ul className="grid gap-2">
                     {(language === "zh" ? tech.features.zh : tech.features.en).map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <div className="h-5 w-5 flex items-center justify-center rounded-full bg-primary/10 text-primary mt-0.5">
+                        <div className="h-5 w-5 flex items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 mt-0.5">
                           <span className="text-xs font-bold">{index + 1}</span>
                         </div>
                         <span>{feature}</span>
@@ -198,7 +197,7 @@ export default function TechnologyPage() {
                   <ul className="grid gap-2">
                     {(language === "zh" ? tech.useCases.zh : tech.useCases.en).map((useCase, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <div className="h-5 w-5 flex items-center justify-center rounded-full bg-primary/10 text-primary mt-0.5">
+                        <div className="h-5 w-5 flex items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 mt-0.5">
                           <span className="text-xs font-bold">{index + 1}</span>
                         </div>
                         <span>{useCase}</span>
@@ -269,7 +268,7 @@ export default function TechnologyPage() {
                       href={`/technologies/${relatedTech.id}`}
                       className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
                     >
-                      {RelatedIconComponent && <RelatedIconComponent className="h-5 w-5 text-primary" />}
+                      {RelatedIconComponent && <RelatedIconComponent className="h-5 w-5 text-neutral-500" />}
                       <span>{relatedTech.name}</span>
                     </Link>
                   )

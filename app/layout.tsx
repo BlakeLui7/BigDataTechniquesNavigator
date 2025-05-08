@@ -72,6 +72,10 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        {/* 检查ThemeProvider是否正确配置 */}
+        {/* 特别检查以下部分是否正确： */}
+        {/* 1. ThemeProvider的导入和使用 */}
+        {/* 2. ThemeProvider的属性设置 */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <LanguageProvider>
             <div className="flex flex-col min-h-screen">

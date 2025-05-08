@@ -140,4 +140,11 @@ export default function Header() {
       )}
     </header>
   )
+  // 检查深色模式切换功能是否正常工作
+  // 确认DropdownMenu和setTheme函数是否正确实现
+
+  // 特别检查以下部分是否正确：
+  // 1. useTheme hook的导入和使用
+  // 2. DropdownMenu的实现
+  // 3. setTheme函数的调用
 }

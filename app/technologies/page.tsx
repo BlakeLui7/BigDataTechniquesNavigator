@@ -1,7 +1,6 @@
 "use client"
 import TechGrid from "@/components/tech-grid"
 import TechFilter from "@/components/tech-filter"
-import VersionFetcher from "@/components/version-fetcher"
 import { useLanguage } from "@/contexts/language-context"
 import { t } from "@/lib/translations"
 
@@ -18,13 +17,8 @@ export default function TechnologiesPage() {
         <TechFilter />
       </div>
 
-      <div className="grid gap-8 md:grid-cols-3 mt-8">
-        <div className="md:col-span-2">
-          <TechGrid />
-        </div>
-        <div>
-          <VersionFetcher />
-        </div>
+      <div className="mt-8">
+        <TechGrid />
       </div>
     </div>
   )
