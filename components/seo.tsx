@@ -21,7 +21,7 @@ export default function Seo({
   twitterHandle = "@bigdatatech",
 }: SeoProps) {
   const router = useRouter()
-  const fullUrl = canonical || `https://bigdatatechnologies.com${router.asPath}`
+  const fullUrl = canonical || `https://www.bigdatanavigator.site${router.asPath}`
   const fullTitle = `${title} | Big Data Technologies Navigator`
 
   return (

@@ -9,6 +9,7 @@ import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
+// Update the metadata to use the new domain name
 export const metadata = {
   title: "Big Data Technologies Navigator",
   description:
@@ -18,11 +19,11 @@ export const metadata = {
   openGraph: {
     title: "Big Data Technologies Navigator",
     description: "Comprehensive guide to modern data collection, processing, and visualization tools",
-    url: "https://bigdatatechnologies.com",
+    url: "https://www.bigdatanavigator.site",
     siteName: "Big Data Technologies Navigator",
     images: [
       {
-        url: "https://bigdatatechnologies.com/og-image.jpg",
+        url: "https://www.bigdatanavigator.site/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Big Data Technologies Navigator",
@@ -35,12 +36,12 @@ export const metadata = {
     card: "summary_large_image",
     title: "Big Data Technologies Navigator",
     description: "Comprehensive guide to modern data collection, processing, and visualization tools",
-    images: ["https://bigdatatechnologies.com/og-image.jpg"],
+    images: ["https://www.bigdatanavigator.site/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://bigdatatechnologies.com",
+    canonical: "https://www.bigdatanavigator.site",
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -70,10 +71,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Big Data Technologies Navigator",
-              "url": "https://bigdatatechnologies.com",
+              "url": "https://www.bigdatanavigator.site",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://bigdatatechnologies.com/search?q={search_term_string}",
+                "target": "https://www.bigdatanavigator.site/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               },
               "description": "A comprehensive guide to modern data collection, processing, and visualization tools including Kafka, Elasticsearch, Flink, ClickHouse, and more."

@@ -128,5 +128,5 @@ export const privacyPolicy: PrivacyPolicy = {
       "检测、预防和解决技术问题",
     ],
   },
-  contactEmail: "privacy@bigdatatechnologies.com",
+  contactEmail: "privacy@bigdatanavigator.site",
 }
