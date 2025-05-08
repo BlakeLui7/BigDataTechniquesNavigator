@@ -66,14 +66,14 @@ export const technologies: Technology[] = [
     },
     category: "collection",
     initialRelease: "2011",
-    latestVersion: "3.5.0 (2023)",
+    latestVersion: "3.7.0 (2024)", // 更新为最新版本 
     developedBy: "Apache Software Foundation",
     website: "https://kafka.apache.org/",
     github: "https://github.com/apache/kafka",
     documentation: "https://kafka.apache.org/documentation/",
     systemRequirements: {
-      en: "Java 8+, ZooKeeper (optional for KRaft mode)",
-      zh: "Java 8+，ZooKeeper（KRaft模式下可选）",
+      en: "Java 8+, KRaft mode is now default (ZooKeeper no longer required)",
+      zh: "Java 8+，KRaft模式现为默认（不再需要ZooKeeper）",
     },
     quickInstall: {
       en: "Download and extract the latest release, configure server.properties, run bin/kafka-server-start.sh",
@@ -81,7 +81,7 @@ export const technologies: Technology[] = [
     },
     dockerCommand: "docker run -p 9092:9092 confluentinc/cp-kafka:latest",
     downloadLink: "https://kafka.apache.org/downloads",
-    releaseNotesLink: "https://kafka.apache.org/documentation/#upgrade",
+    releaseNotesLink: "https://kafka.apache.org/downloads", // 更正为正确的链接 
     features: {
       en: [
         "High-throughput, low-latency platform",
@@ -89,8 +89,16 @@ export const technologies: Technology[] = [
         "Stream processing capabilities",
         "Connector ecosystem for integration",
         "Exactly-once semantics",
+        "Default KRaft mode (no ZooKeeper dependency)",
       ],
-      zh: ["高吞吐量、低延迟平台", "可扩展、容错架构", "流处理能力", "用于集成的连接器生态系统", "精确一次语义"],
+      zh: [
+        "高吞吐量、低延迟平台", 
+        "可扩展、容错架构", 
+        "流处理能力", 
+        "用于集成的连接器生态系统", 
+        "精确一次语义",
+        "默认KRaft模式（无ZooKeeper依赖）"
+      ],
     },
     useCases: {
       en: [
@@ -113,14 +121,14 @@ export const technologies: Technology[] = [
     },
     category: "collection",
     initialRelease: "2009",
-    latestVersion: "8.9.0 (2023)",
+    latestVersion: "8.13.3 (2024)", // 更新为最新版本 
     developedBy: "Elastic",
     website: "https://www.elastic.co/logstash/",
     github: "https://github.com/elastic/logstash",
     documentation: "https://www.elastic.co/guide/en/logstash/current/index.html",
     systemRequirements: {
-      en: "Java 11+, 2GB+ RAM",
-      zh: "Java 11+，2GB+ 内存",
+      en: "Java 17+, 2GB+ RAM",
+      zh: "Java 17+，2GB+ 内存",
     },
     quickInstall: {
       en: "Download and extract the latest release, create a config file, run bin/logstash -f your_config.conf",
@@ -166,14 +174,14 @@ export const technologies: Technology[] = [
     },
     category: "processing",
     initialRelease: "2010",
-    latestVersion: "8.9.0 (2023)",
+    latestVersion: "8.13.3 (2024)", // 更新为最新版本 
     developedBy: "Elastic",
     website: "https://www.elastic.co/elasticsearch/",
     github: "https://github.com/elastic/elasticsearch",
     documentation: "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html",
     systemRequirements: {
-      en: "Java 11+, 2GB+ RAM",
-      zh: "Java 11+，2GB+ 内存",
+      en: "Java 17+, 4GB+ RAM",
+      zh: "Java 17+，4GB+ 内存",
     },
     quickInstall: {
       en: "Download and extract the latest release, run bin/elasticsearch",
@@ -213,14 +221,14 @@ export const technologies: Technology[] = [
     },
     category: "visualization",
     initialRelease: "2013",
-    latestVersion: "8.9.0 (2023)",
+    latestVersion: "8.13.3 (2024)", // 更新为最新版本 
     developedBy: "Elastic",
     website: "https://www.elastic.co/kibana/",
     github: "https://github.com/elastic/kibana",
     documentation: "https://www.elastic.co/guide/en/kibana/current/index.html",
     systemRequirements: {
-      en: "Node.js, Elasticsearch instance",
-      zh: "Node.js，Elasticsearch实例",
+      en: "Node.js 18+, Elasticsearch instance",
+      zh: "Node.js 18+，Elasticsearch实例",
     },
     quickInstall: {
       en: "Download and extract the latest release, configure kibana.yml, run bin/kibana",
@@ -260,22 +268,22 @@ export const technologies: Technology[] = [
     },
     category: "processing",
     initialRelease: "2011",
-    latestVersion: "1.17.1 (2023)",
+    latestVersion: "1.18.1 (2024)", // 更新为最新版本 
     developedBy: "Apache Software Foundation",
     website: "https://flink.apache.org/",
     github: "https://github.com/apache/flink",
     documentation: "https://nightlies.apache.org/flink/flink-docs-stable/",
     systemRequirements: {
-      en: "Java 8+, 2GB+ RAM",
-      zh: "Java 8+，2GB+ 内存",
+      en: "Java 11+, 4GB+ RAM",
+      zh: "Java 11+，4GB+ 内存",
     },
     quickInstall: {
       en: "Download and extract the latest release, run bin/start-cluster.sh",
       zh: "下载并解压最新版本，运行bin/start-cluster.sh",
     },
     dockerCommand: "docker run -p 8081:8081 flink:latest",
-    downloadLink: "https://flink.apache.org/downloads",
-    releaseNotesLink: "https://flink.apache.org/release-notes",
+    downloadLink: "https://flink.apache.org/downloads/",
+    releaseNotesLink: "https://flink.apache.org/releases/",  // 更正为正确的链接 
     features: {
       en: [
         "Unified stream and batch processing",
@@ -283,8 +291,16 @@ export const technologies: Technology[] = [
         "Event-time processing",
         "Highly available stateful stream processing",
         "Native iteration support",
+        "Enhanced ML capabilities",
       ],
-      zh: ["统一的流处理和批处理", "精确一次状态一致性", "事件时间处理", "高可用的有状态流处理", "原生迭代支持"],
+      zh: [
+        "统一的流处理和批处理", 
+        "精确一次状态一致性", 
+        "事件时间处理", 
+        "高可用的有状态流处理", 
+        "原生迭代支持",
+        "增强的机器学习能力"
+      ],
     },
     useCases: {
       en: [
@@ -307,14 +323,14 @@ export const technologies: Technology[] = [
     },
     category: "processing",
     initialRelease: "2016",
-    latestVersion: "23.8 (2023)",
+    latestVersion: "24.4.1.1933 (2024)", // 更新为最新版本 
     developedBy: "ClickHouse, Inc. (originally Yandex)",
     website: "https://clickhouse.com/",
     github: "https://github.com/ClickHouse/ClickHouse",
     documentation: "https://clickhouse.com/docs/",
     systemRequirements: {
-      en: "Linux with x86_64 CPU, 4GB+ RAM",
-      zh: "带有x86_64 CPU的Linux，4GB+ 内存",
+      en: "Linux with x86_64 CPU, 8GB+ RAM",
+      zh: "带有x86_64 CPU的Linux，8GB+ 内存",
     },
     quickInstall: {
       en: "Add ClickHouse repository, run apt-get install clickhouse-server clickhouse-client",
@@ -322,7 +338,7 @@ export const technologies: Technology[] = [
     },
     dockerCommand: "docker run -p 8123:8123 -p 9000:9000 clickhouse/clickhouse-server:latest",
     downloadLink: "https://clickhouse.com/docs/en/getting-started/install",
-    releaseNotesLink: "https://clickhouse.com/docs/en/whats-new",
+    releaseNotesLink: "https://clickhouse.com/docs/en/whats-new/changelog", // 更正为正确的链接 
     features: {
       en: [
         "Column-oriented storage",
@@ -330,8 +346,18 @@ export const technologies: Technology[] = [
         "Real-time query processing",
         "Linear scalability",
         "Hardware efficient",
+        "BYOC (Bring Your Own Cloud) support",
+        "Native CDC connectors",
       ],
-      zh: ["列式存储", "向量化查询执行", "实时查询处理", "线性可扩展性", "硬件高效"],
+      zh: [
+        "列式存储", 
+        "向量化查询执行", 
+        "实时查询处理", 
+        "线性可扩展性", 
+        "硬件高效",
+        "BYOC（自带云）支持",
+        "原生CDC连接器"
+      ],
     },
     useCases: {
       en: [
@@ -354,14 +380,14 @@ export const technologies: Technology[] = [
     },
     category: "visualization",
     initialRelease: "2015",
-    latestVersion: "2.1.0 (2023)",
+    latestVersion: "3.0.1 (2024)", // 更新为最新版本 
     developedBy: "Apache Software Foundation (originally Airbnb)",
     website: "https://superset.apache.org/",
     github: "https://github.com/apache/superset",
     documentation: "https://superset.apache.org/docs/intro",
     systemRequirements: {
-      en: "Python 3.8+, Node.js 16+, PostgreSQL/MySQL",
-      zh: "Python 3.8+，Node.js 16+，PostgreSQL/MySQL",
+      en: "Python 3.9+, Node.js 18+, PostgreSQL/MySQL",
+      zh: "Python 3.9+，Node.js 18+，PostgreSQL/MySQL",
     },
     quickInstall: {
       en: "Install with pip, initialize the database, create an admin user, run superset run",
@@ -377,8 +403,16 @@ export const technologies: Technology[] = [
         "SQL Lab for data exploration",
         "Enterprise-ready authentication",
         "Extensible and pluggable",
+        "Advanced no-code visualization builder",
       ],
-      zh: ["交互式仪表板", "丰富的可视化库", "用于数据探索的SQL Lab", "企业级身份验证", "可扩展和可插拔"],
+      zh: [
+        "交互式仪表板", 
+        "丰富的可视化库", 
+        "用于数据探索的SQL Lab", 
+        "企业级身份验证", 
+        "可扩展和可插拔",
+        "高级无代码可视化构建器"
+      ],
     },
     useCases: {
       en: ["Business intelligence", "Data exploration", "Dashboarding", "Data visualization", "SQL analytics"],
