@@ -36,21 +36,16 @@ export default function AboutPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>{t("ourTeam", language)}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700 dark:text-gray-300">{t("teamText", language)}</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
               <CardTitle>{t("openSource", language)}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 dark:text-gray-300 mb-4">{t("openSourceText", language)}</p>
-              <Button asChild className="flex items-center gap-2">
-                <a href="https://github.com/yourusername/big-data-navigator" target="_blank" rel="noopener noreferrer">
+              <Button asChild variant="outline" className="flex items-center gap-2">
+                <a
+                  href="https://github.com/BlakeLui7/BigDataTechniquesNavigator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="h-4 w-4" />
                   <span>{t("visitRepo", language)}</span>
                 </a>

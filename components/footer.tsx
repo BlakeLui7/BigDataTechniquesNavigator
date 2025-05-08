@@ -28,9 +28,7 @@ export default function Footer() {
             <Database className="h-6 w-6 text-neutral-800 dark:text-neutral-200" />
             <span className="font-medium">{t("appName", language)}</span>
           </Link>
-          <p className="mt-2 text-xs leading-5 text-gray-500">
-            {t("copyright", language, { year: currentYear.toString() })}
-          </p>
+          <p className="mt-2 text-xs leading-5 text-gray-500">{t("copyright", language, { year: "2025" })}</p>
         </div>
       </div>
     </footer>

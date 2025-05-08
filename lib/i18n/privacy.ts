@@ -7,7 +7,7 @@ export const privacy = {
     lastUpdated: "Last Updated",
     introduction: "Introduction",
     introductionText:
-      "At Big Data Technologies Navigator, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.",
+      "At Big Data Technologies Navigator (www.bigdatanavigator.site), we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.",
     informationWeCollect: "Information We Collect",
     informationWeCollectText:
       "We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:",
@@ -20,11 +20,10 @@ export const privacy = {
     howWeUseDataText:
       "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:",
     dataUsagePoints: [
-      "To provide and maintain our service",
-      "To notify you about changes to our service",
-      "To allow you to participate in interactive features of our service when you choose to do so",
-      "To provide customer support",
-      "To gather analysis or valuable information so that we can improve our service",
+      "To provide and maintain our educational content about big data technologies",
+      "To notify you about updates to our content and services",
+      "To improve our website's user experience",
+      "To analyze usage patterns to better organize our content",
       "To monitor the usage of our service",
       "To detect, prevent and address technical issues",
     ],
@@ -46,7 +45,7 @@ export const privacy = {
     lastUpdated: "最后更新",
     introduction: "介绍",
     introductionText:
-      "在大数据技术导航，我们尊重您的隐私并致力于保护您的个人数据。本隐私政策将告知您我们在您访问我们的网站时如何照顾您的个人数据，并告诉您关于您的隐私权以及法律如何保护您。",
+      "在大数据技术导航 (www.bigdatanavigator.site)，我们尊重您的隐私并致力于保护您的个人数据。本隐私政策将告知您我们在您访问我们的网站时如何照顾您的个人数据，并告诉您关于您的隐私权以及法律如何保护您。",
     informationWeCollect: "我们收集的信息",
     informationWeCollectText: "我们可能收集、使用、存储和传输不同类型的关于您的个人数据，我们将其分组如下：",
     technicalData: "技术数据",
@@ -57,11 +56,10 @@ export const privacy = {
     howWeUseData: "我们如何使用您的数据",
     howWeUseDataText: "我们只会在法律允许的情况下使用您的个人数据。最常见的是，我们将在以下情况下使用您的个人数据：",
     dataUsagePoints: [
-      "提供和维护我们的服务",
-      "通知您有关我们服务的变更",
-      "允许您在选择时参与我们服务的互动功能",
-      "提供客户支持",
-      "收集分析或有价值的信息，以便我们改进我们的服务",
+      "提供和维护我们关于大数据技术的教育内容",
+      "通知您有关我们内容和服务的更新",
+      "改善我们网站的用户体验",
+      "分析使用模式以更好地组织我们的内容",
       "监控我们服务的使用情况",
       "检测、预防和解决技术问题",
     ],

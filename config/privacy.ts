@@ -25,7 +25,7 @@ export interface PrivacyPolicy {
 }
 
 export const privacyPolicy: PrivacyPolicy = {
-  lastUpdated: "2023-09-01",
+  lastUpdated: "2025-05-08",
   sections: [
     {
       title: {
@@ -33,7 +33,7 @@ export const privacyPolicy: PrivacyPolicy = {
         zh: "介绍",
       },
       content: {
-        en: "At Big Data Technologies Navigator, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.",
+        en: "At Big Data Technologies Navigator (www.bigdatanavigator.site), we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.",
         zh: "在大数据技术导航，我们尊重您的隐私并致力于保护您的个人数据。本隐私政策将告知您我们在您访问我们的网站时如何照顾您的个人数据，并告诉您关于您的隐私权以及法律如何保护您。",
       },
     },
@@ -110,23 +110,21 @@ export const privacyPolicy: PrivacyPolicy = {
   ],
   dataUsagePoints: {
     en: [
-      "To provide and maintain our service",
-      "To notify you about changes to our service",
-      "To allow you to participate in interactive features of our service when you choose to do so",
-      "To provide customer support",
-      "To gather analysis or valuable information so that we can improve our service",
+      "To provide and maintain our educational content about big data technologies",
+      "To notify you about updates to our content and services",
+      "To improve our website's user experience",
+      "To analyze usage patterns to better organize our content",
       "To monitor the usage of our service",
       "To detect, prevent and address technical issues",
     ],
     zh: [
-      "提供和维护我们的服务",
-      "通知您有关我们服务的变更",
-      "允许您在选择时参与我们服务的互动功能",
-      "提供客户支持",
-      "收集分析或有价值的信息，以便我们改进我们的服务",
+      "提供和维护我们关于大数据技术的教育内容",
+      "通知您有关我们内容和服务的更新",
+      "改善我们网站的用户体验",
+      "分析使用模式以更好地组织我们的内容",
       "监控我们服务的使用情况",
       "检测、预防和解决技术问题",
     ],
   },
-  contactEmail: "privacy@bigdatanavigator.site",
+  contactEmail: "blakelui7@gmail.com",
 }
