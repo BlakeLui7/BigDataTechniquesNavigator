@@ -34,7 +34,7 @@ export const privacyPolicy: PrivacyPolicy = {
       },
       content: {
         en: "At Big Data Technologies Navigator (www.bigdatanavigator.site), we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.",
-        zh: "在大数据技术导航，我们尊重您的隐私并致力于保护您的个人数据。本隐私政策将告知您我们在您访问我们的网站时如何照顾您的个人数据，并告诉您关于您的隐私权以及法律如何保护您。",
+        zh: "在大数据技术导航 (www.bigdatanavigator.site)，我们尊重您的隐私并致力于保护您的个人数据。本隐私政策将告知您我们在您访问我们的网站时如何照顾您的个人数据，并告诉您关于您的隐私权以及法律如何保护您。",
       },
     },
     {
@@ -69,6 +69,16 @@ export const privacyPolicy: PrivacyPolicy = {
     },
     {
       title: {
+        en: "Analytics Tools",
+        zh: "分析工具",
+      },
+      content: {
+        en: "We use analytics tools including Vercel Web Analytics and Google Analytics to help us understand how visitors use our site. These tools collect information such as how often users visit our site, what pages they visit, and what other sites they used prior to coming to our site. We use the information we get from these tools to improve our site. These tools collect the IP address assigned to you on the date you visit our site, but not your name or other identifying information. We do not combine the information collected through the use of these tools with personally identifiable information. Google's ability to use and share information collected by Google Analytics about your visits to our site is restricted by the Google Analytics Terms of Use and the Google Privacy Policy. You can prevent Google Analytics from recognizing you on return visits to this site by disabling cookies on your browser or using Google's Analytics Opt-out Browser Add-on.",
+        zh: "我们使用分析工具，包括Vercel Web Analytics和Google Analytics，以帮助我们了解访问者如何使用我们的网站。这些工具收集的信息包括用户访问我们网站的频率、他们访问的页面以及在访问我们网站之前使用的其他网站。我们使用从这些工具获得的信息来改进我们的网站。这些工具收集您在访问我们网站当天分配给您的IP地址，但不收集您的姓名或其他识别信息。我们不会将通过使用这些工具收集的信息与个人身份信息相结合。Google使用和共享Google Analytics收集的有关您访问我们网站的信息的能力受Google Analytics使用条款和Google隐私政策的限制。您可以通过在浏览器上禁用cookies或使用Google的Analytics退出浏览器插件，防止Google Analytics在您再次访问本网站时识别您。",
+      },
+    },
+    {
+      title: {
         en: "How We Use Your Data",
         zh: "我们如何使用您的数据",
       },
@@ -83,8 +93,8 @@ export const privacyPolicy: PrivacyPolicy = {
         zh: "Cookies",
       },
       content: {
-        en: "We use cookies and similar tracking technologies to track the activity on our service and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.",
-        zh: "我们使用cookies和类似的跟踪技术来跟踪我们服务上的活动并保存某些信息。Cookies是包含少量数据的文件，可能包括匿名唯一标识符。",
+        en: "We use cookies and similar tracking technologies to track the activity on our service and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. Our analytics tools may use cookies to collect information and improve our services. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our service.",
+        zh: "我们使用cookies和类似的跟踪技术来跟踪我们服务上的活动并保存某些信息。Cookies是包含少量数据的文件，可能包括匿名唯一标识符。我们的分析工具可能使用cookies来收集信息并改进我们的服务。您可以指示您的浏览器拒绝所有cookies或在发送cookie时提示您。但是，如果您不接受cookies，您可能无法使用我们服务的某些部分。",
       },
     },
     {
@@ -116,6 +126,7 @@ export const privacyPolicy: PrivacyPolicy = {
       "To analyze usage patterns to better organize our content",
       "To monitor the usage of our service",
       "To detect, prevent and address technical issues",
+      "To measure the effectiveness of our content and understand user preferences",
     ],
     zh: [
       "提供和维护我们关于大数据技术的教育内容",
@@ -124,6 +135,7 @@ export const privacyPolicy: PrivacyPolicy = {
       "分析使用模式以更好地组织我们的内容",
       "监控我们服务的使用情况",
       "检测、预防和解决技术问题",
+      "衡量我们内容的有效性并了解用户偏好",
     ],
   },
   contactEmail: "blakelui7@gmail.com",

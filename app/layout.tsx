@@ -6,6 +6,8 @@ import { LanguageProvider } from "@/contexts/language-context"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Script from "next/script"
+import { Analytics } from "@vercel/analytics/react"
+import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -54,17 +56,34 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Google Analytics - 按照Google官方建议放在head中 */}
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-KBEKTPZC5G" />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-KBEKTPZC5G');
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <LanguageProvider>
             <div className="flex flex-col min-h-screen">
-              <Header />
-              {children}
-              <Footer />
+              <Suspense>
+                <Header />
+                {children}
+                <Footer />
+              </Suspense>
             </div>
           </LanguageProvider>
         </ThemeProvider>
+        {/* Schema.org */}
         <Script id="schema-org" type="application/ld+json">
           {`
             {
@@ -81,6 +100,8 @@ export default function RootLayout({
             }
           `}
         </Script>
+        {/* Vercel Analytics */}
+        <Analytics />
       </body>
     </html>
   )
