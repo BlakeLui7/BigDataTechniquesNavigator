@@ -48,7 +48,9 @@ export default function ComparisonPage() {
           <CardHeader>
             <div className="flex items-center gap-2">
               <CardTitle>{t("dataCollectionTech", language)}</CardTitle>
-              <Badge>Collection</Badge>
+              <Badge className="bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 border-neutral-200 dark:border-neutral-700">
+                Collection
+              </Badge>
             </div>
             <CardDescription>{t("dataCollectionDesc", language)}</CardDescription>
           </CardHeader>
@@ -98,7 +100,9 @@ export default function ComparisonPage() {
           <CardHeader>
             <div className="flex items-center gap-2">
               <CardTitle>{t("dataProcessingTech", language)}</CardTitle>
-              <Badge variant="secondary">Processing</Badge>
+              <Badge className="bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 border-neutral-200 dark:border-neutral-700">
+                Processing
+              </Badge>
             </div>
             <CardDescription>{t("dataProcessingDesc", language)}</CardDescription>
           </CardHeader>
@@ -148,7 +152,9 @@ export default function ComparisonPage() {
           <CardHeader>
             <div className="flex items-center gap-2">
               <CardTitle>{t("dataVisualizationTech", language)}</CardTitle>
-              <Badge variant="outline">Visualization</Badge>
+              <Badge className="bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 border-neutral-200 dark:border-neutral-700">
+                Visualization
+              </Badge>
             </div>
             <CardDescription>{t("dataVisualizationDesc", language)}</CardDescription>
           </CardHeader>
