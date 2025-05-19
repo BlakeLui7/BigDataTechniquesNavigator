@@ -1,24 +1,30 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowRight, Database, GitBranch, FileText, BarChart3 } from "lucide-react"
+import { ArrowRight, Database, GitBranch, FileText, BarChart3, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import TechGrid from "@/components/tech-grid"
 import { useLanguage } from "@/contexts/language-context"
 import { t } from "@/lib/i18n"
+import { useRef } from "react"
 
 export default function Home() {
   const { language } = useLanguage()
+  const featuredTechRef = useRef<HTMLDivElement>(null)
+
+  const scrollToFeaturedTech = () => {
+    featuredTechRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        {/* 英雄区域 - 苹果风格的简洁设计 */}
-        <section className="w-full py-16 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
+        {/* 英雄区域 - 减小高度并添加向下滚动指示器 */}
+        <section className="w-full py-10 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 relative">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-6 text-center">
-              <div className="space-y-3">
-                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl/none">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
                   {t("heroTitle", language)}
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -33,12 +39,22 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
+
+              {/* 向下滚动指示器 */}
+              <button
+                onClick={scrollToFeaturedTech}
+                className="absolute bottom-4 left-0 right-0 mx-auto w-max flex flex-col items-center text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors animate-bounce"
+                aria-label="Scroll to featured technologies"
+              >
+                <span className="text-sm mb-1">{t("scrollToSee", language)}</span>
+                <ChevronDown className="h-6 w-6" />
+              </button>
             </div>
           </div>
         </section>
 
-        {/* 特色技术区域 */}
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-gray-950">
+        {/* 特色技术区域 - 添加ref以便滚动 */}
+        <section ref={featuredTechRef} className="w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-gray-950">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
               <div className="space-y-2">

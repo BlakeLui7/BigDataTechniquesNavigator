@@ -88,4 +88,34 @@ export const privacy = {
       "在某些情况下，您根据数据保护法对您的个人数据拥有权利，包括请求访问、更正、删除、限制、传输或反对处理的权利。",
     contactForPrivacy: "如有关于本隐私政策的任何问题，请联系我们：",
   },
+  de: {
+    // Privacy page
+    privacyTitle: "Datenschutzrichtlinie",
+    privacySubtitle: "Wie wir mit Ihren Daten und Ihrer Privatsphäre umgehen",
+    lastUpdated: "Zuletzt aktualisiert",
+    introduction: "Einführung",
+    introductionText:
+      "Bei Big Data Technologies Navigator (www.bigdatanavigator.site) respektieren wir Ihre Privatsphäre und sind bestrebt, Ihre persönlichen Daten zu schützen. Diese Datenschutzrichtlinie informiert Sie darüber, wie wir mit Ihren persönlichen Daten umgehen, wenn Sie unsere Website besuchen, und informiert Sie über Ihre Datenschutzrechte und wie das Gesetz Sie schützt.",
+    contactForPrivacy: "Bei Fragen zu dieser Datenschutzrichtlinie kontaktieren Sie uns bitte unter:",
+  },
+  fr: {
+    // Privacy page
+    privacyTitle: "Politique de confidentialité",
+    privacySubtitle: "Comment nous traitons vos données et votre vie privée",
+    lastUpdated: "Dernière mise à jour",
+    introduction: "Introduction",
+    introductionText:
+      "Chez Navigateur de Technologies Big Data (www.bigdatanavigator.site), nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles. Cette politique de confidentialité vous informera sur la façon dont nous prenons soin de vos données personnelles lorsque vous visitez notre site web et vous informera de vos droits en matière de confidentialité et de la façon dont la loi vous protège.",
+    contactForPrivacy: "Pour toute question concernant cette politique de confidentialité, veuillez nous contacter à :",
+  },
+  es: {
+    // Privacy page
+    privacyTitle: "Política de privacidad",
+    privacySubtitle: "Cómo manejamos sus datos y privacidad",
+    lastUpdated: "Última actualización",
+    introduction: "Introducción",
+    introductionText:
+      "En Navegador de Tecnologías de Big Data (www.bigdatanavigator.site), respetamos su privacidad y estamos comprometidos a proteger sus datos personales. Esta política de privacidad le informará sobre cómo cuidamos sus datos personales cuando visita nuestro sitio web y le informará sobre sus derechos de privacidad y cómo la ley le protege.",
+    contactForPrivacy: "Para cualquier pregunta sobre esta política de privacidad, contáctenos en:",
+  },
 }

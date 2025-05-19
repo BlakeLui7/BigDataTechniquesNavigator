@@ -33,9 +33,42 @@ export const translations = {
     ...contact.zh,
     ...privacy.zh,
   },
+  de: {
+    ...common.de,
+    ...home.de,
+    ...technologies.de,
+    ...comparison.de,
+    ...installation.de,
+    ...resources.de,
+    ...about.de,
+    ...contact.de,
+    ...privacy.de,
+  },
+  fr: {
+    ...common.fr,
+    ...home.fr,
+    ...technologies.fr,
+    ...comparison.fr,
+    ...installation.fr,
+    ...resources.fr,
+    ...about.fr,
+    ...contact.fr,
+    ...privacy.fr,
+  },
+  es: {
+    ...common.es,
+    ...home.es,
+    ...technologies.es,
+    ...comparison.es,
+    ...installation.es,
+    ...resources.es,
+    ...about.es,
+    ...contact.es,
+    ...privacy.es,
+  },
 }
 
-export type LanguageKey = keyof typeof translations
+export type LanguageKey = "en" | "zh" | "de" | "fr" | "es"
 export type TranslationKey = keyof typeof translations.en
 
 /**

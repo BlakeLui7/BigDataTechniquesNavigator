@@ -15,6 +15,7 @@ export const home = {
     dataVisualizationDesc: "Platforms for creating interactive dashboards and visual representations of data.",
     documentation: "Documentation",
     documentationDesc: "Comprehensive guides, tutorials, and reference materials for each technology.",
+    scrollToSee: "Scroll to see featured technologies",
   },
   zh: {
     // Home page
@@ -31,5 +32,61 @@ export const home = {
     dataVisualizationDesc: "用于创建交互式仪表板和数据可视化表示的平台。",
     documentation: "文档",
     documentationDesc: "每种技术的综合指南、教程和参考资料。",
+    scrollToSee: "向下滚动查看特色技术",
+  },
+  de: {
+    // Home page
+    heroTitle: "Big Data Technologien Navigator",
+    heroSubtitle: "Ihr umfassender Leitfaden für moderne Datenerfassungs-, Verarbeitungs- und Visualisierungstools.",
+    exploreTechnologies: "Technologien erkunden",
+    featuredTechnologies: "Ausgewählte Technologien",
+    featuredDescription:
+      "Entdecken Sie die beliebtesten Big-Data-Technologien, die in modernen Datenpipelines verwendet werden.",
+    dataCollection: "Datenerfassung",
+    dataCollectionDesc: "Tools und Technologien zur Sammlung und Aufnahme von Daten aus verschiedenen Quellen.",
+    dataProcessing: "Datenverarbeitung",
+    dataProcessingDesc: "Lösungen zur Transformation, Anreicherung und Analyse großer Datenmengen.",
+    dataVisualization: "Datenvisualisierung",
+    dataVisualizationDesc: "Plattformen zur Erstellung interaktiver Dashboards und visueller Darstellungen von Daten.",
+    documentation: "Dokumentation",
+    documentationDesc: "Umfassende Anleitungen, Tutorials und Referenzmaterialien für jede Technologie.",
+    scrollToSee: "Scrollen Sie, um ausgewählte Technologien zu sehen",
+  },
+  fr: {
+    // Home page
+    heroTitle: "Navigateur de Technologies Big Data",
+    heroSubtitle: "Votre guide complet des outils modernes de collecte, de traitement et de visualisation des données.",
+    exploreTechnologies: "Explorer les technologies",
+    featuredTechnologies: "Technologies vedettes",
+    featuredDescription:
+      "Explorez les technologies Big Data les plus populaires utilisées dans les pipelines de données modernes.",
+    dataCollection: "Collecte de données",
+    dataCollectionDesc: "Outils et technologies pour recueillir et ingérer des données provenant de diverses sources.",
+    dataProcessing: "Traitement des données",
+    dataProcessingDesc: "Solutions pour transformer, enrichir et analyser de grands volumes de données.",
+    dataVisualization: "Visualisation des données",
+    dataVisualizationDesc:
+      "Plateformes pour créer des tableaux de bord interactifs et des représentations visuelles des données.",
+    documentation: "Documentation",
+    documentationDesc: "Guides complets, tutoriels et documents de référence pour chaque technologie.",
+    scrollToSee: "Faites défiler pour voir les technologies en vedette",
+  },
+  es: {
+    // Home page
+    heroTitle: "Navegador de Tecnologías de Big Data",
+    heroSubtitle: "Su guía completa de herramientas modernas de recopilación, procesamiento y visualización de datos.",
+    exploreTechnologies: "Explorar tecnologías",
+    featuredTechnologies: "Tecnologías destacadas",
+    featuredDescription:
+      "Explore las tecnologías de Big Data más populares utilizadas en los flujos de datos modernos.",
+    dataCollection: "Recopilación de datos",
+    dataCollectionDesc: "Herramientas y tecnologías para recopilar e ingerir datos de diversas fuentes.",
+    dataProcessing: "Procesamiento de datos",
+    dataProcessingDesc: "Soluciones para transformar, enriquecer y analizar grandes volúmenes de datos.",
+    dataVisualization: "Visualización de datos",
+    dataVisualizationDesc: "Plataformas para crear paneles interactivos y representaciones visuales de datos.",
+    documentation: "Documentación",
+    documentationDesc: "Guías completas, tutoriales y materiales de referencia para cada tecnología.",
+    scrollToSee: "Desplácese para ver las tecnologías destacadas",
   },
 }

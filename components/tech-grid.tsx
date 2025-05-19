@@ -23,6 +23,7 @@ export default function TechGrid() {
   useEffect(() => {
     async function loadTechnologies() {
       try {
+        setLoading(true)
         const data = await getAllTechnologies()
         setTechnologies(data)
       } catch (error) {
@@ -32,7 +33,17 @@ export default function TechGrid() {
       }
     }
 
-    loadTechnologies()
+    // 立即设置一些初始数据，然后异步加载完整数据
+    // 这样用户可以立即看到一些内容
+    if (technologies.length === 0) {
+      // 从config/technologies导入的默认数据
+      import("@/config/technologies").then((module) => {
+        setTechnologies(module.technologies.slice(0, 3))
+        loadTechnologies()
+      })
+    } else {
+      loadTechnologies()
+    }
   }, [])
 
   // 翻译类别名称

@@ -18,4 +18,31 @@ export const resources = {
     community: "社区",
     visitResource: "访问资源",
   },
+  de: {
+    // Resources page
+    resourcesTitle: "Lernressourcen",
+    resourcesSubtitle: "Kuratierte Ressourcen, die Ihnen helfen, Big-Data-Technologien zu erlernen und zu beherrschen",
+    tutorials: "Tutorials",
+    videos: "Videos",
+    community: "Community",
+    visitResource: "Ressource besuchen",
+  },
+  fr: {
+    // Resources page
+    resourcesTitle: "Ressources d'apprentissage",
+    resourcesSubtitle: "Ressources sélectionnées pour vous aider à apprendre et à maîtriser les technologies Big Data",
+    tutorials: "Tutoriels",
+    videos: "Vidéos",
+    community: "Communauté",
+    visitResource: "Visiter la ressource",
+  },
+  es: {
+    // Resources page
+    resourcesTitle: "Recursos de aprendizaje",
+    resourcesSubtitle: "Recursos seleccionados para ayudarle a aprender y dominar las tecnologías de Big Data",
+    tutorials: "Tutoriales",
+    videos: "Vídeos",
+    community: "Comunidad",
+    visitResource: "Visitar recurso",
+  },
 }

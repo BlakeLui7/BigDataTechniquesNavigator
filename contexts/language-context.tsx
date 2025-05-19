@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
 
-type Language = "en" | "zh"
+type Language = "en" | "zh" | "de" | "fr" | "es"
 
 type LanguageContextType = {
   language: Language
@@ -17,14 +17,28 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   // Load saved language preference on mount
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") as Language
-    if (savedLanguage && (savedLanguage === "en" || savedLanguage === "zh")) {
+    if (
+      savedLanguage &&
+      (savedLanguage === "en" ||
+        savedLanguage === "zh" ||
+        savedLanguage === "de" ||
+        savedLanguage === "fr" ||
+        savedLanguage === "es")
+    ) {
       setLanguage(savedLanguage)
     } else {
       // Try to detect browser language
       const browserLanguage = navigator.language.split("-")[0]
       if (browserLanguage === "zh") {
         setLanguage("zh")
+      } else if (browserLanguage === "de") {
+        setLanguage("de")
+      } else if (browserLanguage === "fr") {
+        setLanguage("fr")
+      } else if (browserLanguage === "es") {
+        setLanguage("es")
       }
+      // Default to English if no match
     }
   }, [])
 

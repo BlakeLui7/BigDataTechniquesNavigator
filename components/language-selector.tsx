@@ -24,6 +24,15 @@ export default function LanguageSelector() {
         <DropdownMenuItem onClick={() => setLanguage("zh")} className={language === "zh" ? "bg-accent" : ""}>
           {t("chinese", language)}
         </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLanguage("de")} className={language === "de" ? "bg-accent" : ""}>
+          {t("german", language)}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLanguage("fr")} className={language === "fr" ? "bg-accent" : ""}>
+          {t("french", language)}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLanguage("es")} className={language === "es" ? "bg-accent" : ""}>
+          {t("spanish", language)}
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
