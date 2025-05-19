@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { useLanguage } from "@/contexts/language-context"
-import { t } from "@/lib/translations"
+import { safeT } from "@/lib/i18n"
 
 export default function TechFilter() {
   const [showCollection, setShowCollection] = useState(true)
@@ -25,20 +25,20 @@ export default function TechFilter() {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className="flex items-center gap-2">
           <Filter className="h-4 w-4" />
-          <span>{t("filter", language)}</span>
+          <span>{safeT("filter", language, "Filter")}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
-        <DropdownMenuLabel>{t("categories", language)}</DropdownMenuLabel>
+        <DropdownMenuLabel>{safeT("categories", language, "Categories")}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuCheckboxItem checked={showCollection} onCheckedChange={setShowCollection}>
-          {t("dataCollection", language)}
+          {safeT("dataCollection", language, "Data Collection")}
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem checked={showProcessing} onCheckedChange={setShowProcessing}>
-          {t("dataProcessing", language)}
+          {safeT("dataProcessing", language, "Data Processing")}
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem checked={showVisualization} onCheckedChange={setShowVisualization}>
-          {t("dataVisualization", language)}
+          {safeT("dataVisualization", language, "Data Visualization")}
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>

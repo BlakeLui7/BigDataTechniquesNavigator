@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useLanguage } from "@/contexts/language-context"
-import { t } from "@/lib/i18n"
+import { safeT } from "@/lib/i18n"
 import { resources } from "@/config/resources"
 
 // 图标映射
@@ -21,15 +21,19 @@ export default function ResourcesPage() {
 
   return (
     <div className="container px-4 py-12 md:px-6">
-      <h1 className="text-3xl font-bold tracking-tight mb-2">{t("resourcesTitle", language)}</h1>
-      <p className="text-gray-500 dark:text-gray-400 mb-8">{t("resourcesSubtitle", language)}</p>
+      <h1 className="text-3xl font-bold tracking-tight mb-2">
+        {safeT("resourcesTitle", language, "Learning Resources")}
+      </h1>
+      <p className="text-gray-500 dark:text-gray-400 mb-8">
+        {safeT("resourcesSubtitle", language, "Curated resources to help you learn and master big data technologies")}
+      </p>
 
       <Tabs defaultValue="documentation" className="w-full">
         <TabsList className="grid w-full grid-cols-4">
-          <TabsTrigger value="documentation">{t("documentation", language)}</TabsTrigger>
-          <TabsTrigger value="tutorials">{t("tutorials", language)}</TabsTrigger>
-          <TabsTrigger value="videos">{t("videos", language)}</TabsTrigger>
-          <TabsTrigger value="community">{t("community", language)}</TabsTrigger>
+          <TabsTrigger value="documentation">{safeT("documentation", language, "Documentation")}</TabsTrigger>
+          <TabsTrigger value="tutorials">{safeT("tutorials", language, "Tutorials")}</TabsTrigger>
+          <TabsTrigger value="videos">{safeT("videos", language, "Videos")}</TabsTrigger>
+          <TabsTrigger value="community">{safeT("community", language, "Community")}</TabsTrigger>
         </TabsList>
 
         {resources.map((category) => (
@@ -42,15 +46,17 @@ export default function ResourcesPage() {
                     <CardHeader className="flex flex-row items-start gap-4 pb-2">
                       {IconComponent && <IconComponent className="h-6 w-6 text-neutral-500 mt-1" />}
                       <div>
-                        <CardTitle className="text-xl">{item.title[language]}</CardTitle>
-                        <CardDescription className="mt-1">{item.description[language]}</CardDescription>
+                        <CardTitle className="text-xl">{item.title[language] || item.title.en}</CardTitle>
+                        <CardDescription className="mt-1">
+                          {item.description[language] || item.description.en}
+                        </CardDescription>
                       </div>
                     </CardHeader>
                     <CardContent className="flex-grow"></CardContent>
                     <CardFooter>
                       <Button asChild variant="ghost" className="w-full justify-between">
                         <a href={item.link} target="_blank" rel="noopener noreferrer">
-                          <span>{t("visitResource", language)}</span>
+                          <span>{safeT("visitResource", language, "Visit resource")}</span>
                           <ArrowRight className="h-4 w-4" />
                         </a>
                       </Button>

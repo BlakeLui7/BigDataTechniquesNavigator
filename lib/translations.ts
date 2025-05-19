@@ -1,3 +1,5 @@
+import { safeT as safeTranslate, t as translate, type LanguageKey, type TranslationKey } from "./i18n"
+
 export const translations = {
   en: {
     // Common
@@ -217,17 +219,8 @@ export const translations = {
   },
 }
 
-export type LanguageKey = keyof typeof translations
-export type TranslationKey = keyof typeof translations.en
+// 重新导出翻译函数，保持向后兼容性
+export { safeTranslate as safeT, translate as t }
+export type { LanguageKey, TranslationKey }
 
-export function t(key: TranslationKey, language: LanguageKey, params?: Record<string, string>): string {
-  let text = translations[language][key] || translations.en[key] || key
-
-  if (params) {
-    Object.entries(params).forEach(([param, value]) => {
-      text = text.replace(`{${param}}`, value)
-    })
-  }
-
-  return text
-}
+// 导出原始的translations对象，以便在需要时直接访问;

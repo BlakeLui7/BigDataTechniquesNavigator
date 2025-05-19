@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
-import { t } from "@/lib/i18n"
+import { safeT } from "@/lib/i18n"
 import { getAllTechnologies } from "@/services/tech-service"
 import type { Technology } from "@/config/technologies"
 import { iconMap } from "@/config/technologies"
@@ -48,9 +48,9 @@ export default function TechGrid() {
 
   // 翻译类别名称
   const getCategoryName = (category: string) => {
-    if (category === "collection") return t("dataCollection", language)
-    if (category === "processing") return t("dataProcessing", language)
-    if (category === "visualization") return t("dataVisualization", language)
+    if (category === "collection") return safeT("dataCollection", language, "Data Collection")
+    if (category === "processing") return safeT("dataProcessing", language, "Data Processing")
+    if (category === "visualization") return safeT("dataVisualization", language, "Data Visualization")
     return category
   }
 
@@ -95,21 +95,35 @@ export default function TechGrid() {
                   </Badge>
                 </div>
                 <CardDescription className="mt-2">
-                  {language === "zh" ? tech.description.zh : tech.description.en}
+                  {language === "zh"
+                    ? tech.description.zh
+                    : language === "de" && tech.description.de
+                      ? tech.description.de
+                      : language === "fr" && tech.description.fr
+                        ? tech.description.fr
+                        : language === "es" && tech.description.es
+                          ? tech.description.es
+                          : tech.description.en}
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div className="flex flex-col">
-                    <span className="text-gray-500 dark:text-gray-400">{t("initialRelease", language)}</span>
+                    <span className="text-gray-500 dark:text-gray-400">
+                      {safeT("initialRelease", language, "Initial Release")}
+                    </span>
                     <span className="font-medium">{tech.initialRelease}</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-gray-500 dark:text-gray-400">{t("latestVersion", language)}</span>
+                    <span className="text-gray-500 dark:text-gray-400">
+                      {safeT("latestVersion", language, "Latest Version")}
+                    </span>
                     <span className="font-medium">{tech.latestVersion}</span>
                   </div>
                   <div className="flex flex-col col-span-2 mt-2">
-                    <span className="text-gray-500 dark:text-gray-400">{t("developedBy", language)}</span>
+                    <span className="text-gray-500 dark:text-gray-400">
+                      {safeT("developedBy", language, "Developed By")}
+                    </span>
                     <span className="font-medium">{tech.developedBy}</span>
                   </div>
                 </div>
@@ -120,7 +134,7 @@ export default function TechGrid() {
                     variant="ghost"
                     className="w-full justify-between text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-200"
                   >
-                    <span>{t("learnMore", language)}</span>
+                    <span>{safeT("learnMore", language, "Learn more")}</span>
                     <ArrowRight
                       className={`h-4 w-4 transition-transform duration-300 ${
                         hoveredId === tech.id ? "translate-x-1" : ""

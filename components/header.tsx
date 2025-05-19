@@ -9,7 +9,7 @@ import { useTheme } from "next-themes"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import LanguageSelector from "@/components/language-selector"
 import { useLanguage } from "@/contexts/language-context"
-import { t } from "@/lib/i18n"
+import { safeT } from "@/lib/i18n"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -18,11 +18,11 @@ export default function Header() {
   const { language } = useLanguage()
 
   const navigation = [
-    { name: t("home", language), href: "/" },
-    { name: t("technologies", language), href: "/technologies" },
-    { name: t("comparison", language), href: "/comparison" },
-    { name: t("installation", language), href: "/installation" },
-    { name: t("resources", language), href: "/resources" },
+    { name: safeT("home", language, "Home"), href: "/" },
+    { name: safeT("technologies", language, "Technologies"), href: "/technologies" },
+    { name: safeT("comparison", language, "Comparison"), href: "/comparison" },
+    { name: safeT("installation", language, "Installation"), href: "/installation" },
+    { name: safeT("resources", language, "Resources"), href: "/resources" },
   ]
 
   return (
@@ -31,7 +31,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Database className="h-8 w-8 text-neutral-800 dark:text-neutral-200" />
-            <span className="font-semibold text-xl">{t("appName", language)}</span>
+            <span className="font-semibold text-xl">{safeT("appName", language, "Big Data Navigator")}</span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -70,9 +70,15 @@ export default function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>{t("lightMode", language)}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>{t("darkMode", language)}</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>{t("systemMode", language)}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("light")}>
+                {safeT("lightMode", language, "Light")}
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("dark")}>
+                {safeT("darkMode", language, "Dark")}
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("system")}>
+                {safeT("systemMode", language, "System")}
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -85,7 +91,7 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
                 <Database className="h-8 w-8 text-neutral-800 dark:text-neutral-200" />
-                <span className="font-semibold text-xl">{t("appName", language)}</span>
+                <span className="font-semibold text-xl">{safeT("appName", language, "Big Data Navigator")}</span>
               </Link>
               <button
                 type="button"
@@ -125,10 +131,14 @@ export default function Header() {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                      <DropdownMenuItem onClick={() => setTheme("light")}>{t("lightMode", language)}</DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setTheme("dark")}>{t("darkMode", language)}</DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setTheme("light")}>
+                        {safeT("lightMode", language, "Light")}
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setTheme("dark")}>
+                        {safeT("darkMode", language, "Dark")}
+                      </DropdownMenuItem>
                       <DropdownMenuItem onClick={() => setTheme("system")}>
-                        {t("systemMode", language)}
+                        {safeT("systemMode", language, "System")}
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -140,11 +150,4 @@ export default function Header() {
       )}
     </header>
   )
-  // 检查深色模式切换功能是否正常工作
-  // 确认DropdownMenu和setTheme函数是否正确实现
-
-  // 特别检查以下部分是否正确：
-  // 1. useTheme hook的导入和使用
-  // 2. DropdownMenu的实现
-  // 3. setTheme函数的调用
 }

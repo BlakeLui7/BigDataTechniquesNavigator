@@ -769,4 +769,198 @@ export const versionHistories: VersionConfig = {
       },
     },
   ],
+  hadoop: [
+    {
+      version: "3.4.1",
+      date: { en: "October 2024", zh: "2024年10月" },
+      highlights: {
+        en: [
+          "Bug fixes and stability improvements",
+          "Lean tar distribution excluding large AWS SDK",
+          "Java 11 support",
+          "Performance optimizations",
+        ],
+        zh: ["错误修复和稳定性改进", "精简tar包，默认不包含大型AWS SDK", "支持Java 11", "性能优化"],
+      },
+    },
+    {
+      version: "3.3.6",
+      date: { en: "November 2023", zh: "2023年11月" },
+      highlights: {
+        en: [
+          "Security improvements",
+          "Performance optimizations",
+          "Bug fixes and stability improvements",
+          "Support for newer Java versions",
+        ],
+        zh: ["安全性改进", "性能优化", "错误修复和稳定性改进", "支持更新的Java版本"],
+      },
+    },
+    {
+      version: "3.3.0",
+      date: { en: "July 2021", zh: "2021年7月" },
+      highlights: {
+        en: [
+          "HDFS Router-based Federation",
+          "Improved S3A connector",
+          "Enhanced security features",
+          "Performance improvements",
+        ],
+        zh: ["基于路由器的HDFS联邦", "改进的S3A连接器", "增强的安全功能", "性能改进"],
+      },
+    },
+    {
+      version: "3.0.0",
+      date: { en: "December 2017", zh: "2017年12月" },
+      highlights: {
+        en: [
+          "Erasure coding in HDFS",
+          "YARN Timeline Service v.2",
+          "Shell script rewrite",
+          "Support for multiple standby NameNodes",
+        ],
+        zh: ["HDFS中的纠删码", "YARN时间线服务v.2", "Shell脚本重写", "支持多个备用NameNode"],
+      },
+    },
+    {
+      version: "2.0.0",
+      date: { en: "October 2013", zh: "2013年10月" },
+      highlights: {
+        en: [
+          "YARN (Yet Another Resource Negotiator)",
+          "HDFS Federation",
+          "HDFS High Availability",
+          "MapReduce 2.0 (MRv2)",
+        ],
+        zh: ["YARN（另一种资源协商器）", "HDFS联邦", "HDFS高可用性", "MapReduce 2.0（MRv2）"],
+      },
+    },
+    {
+      version: "1.0.0",
+      date: { en: "December 2011", zh: "2011年12月" },
+      highlights: {
+        en: ["First stable release", "HDFS improvements", "MapReduce enhancements", "Security features"],
+        zh: ["首个稳定版本", "HDFS改进", "MapReduce增强", "安全功能"],
+      },
+    },
+  ],
+
+  spark: [
+    {
+      version: "3.5.5",
+      date: { en: "February 2025", zh: "2025年2月" },
+      highlights: {
+        en: [
+          "Improved Pandas API compatibility",
+          "Enhanced Spark Connect capabilities",
+          "Better integration with Delta Lake",
+          "Performance improvements for SQL and DataFrame operations",
+        ],
+        zh: [
+          "改进的Pandas API兼容性",
+          "增强的Spark Connect功能",
+          "与Delta Lake更好的集成",
+          "SQL和DataFrame操作的性能改进",
+        ],
+      },
+    },
+    {
+      version: "3.0.0",
+      date: { en: "June 2020", zh: "2020年6月" },
+      highlights: {
+        en: [
+          "Adaptive query execution",
+          "Dynamic partition pruning",
+          "Accelerator-aware scheduling",
+          "Significant improvements to Python and pandas APIs",
+        ],
+        zh: ["自适应查询执行", "动态分区修剪", "加速器感知调度", "Python和pandas API的显著改进"],
+      },
+    },
+    {
+      version: "2.0.0",
+      date: { en: "July 2016", zh: "2016年7月" },
+      highlights: {
+        en: [
+          "Structured Streaming",
+          "Unified DataFrame/Dataset API",
+          "Improved SQL support",
+          "Performance improvements",
+        ],
+        zh: ["结构化流处理", "统一的DataFrame/Dataset API", "改进的SQL支持", "性能改进"],
+      },
+    },
+    {
+      version: "1.0.0",
+      date: { en: "May 2014", zh: "2014年5月" },
+      highlights: {
+        en: ["First stable release", "Spark SQL introduction", "MLlib improvements", "GraphX for graph processing"],
+        zh: ["首个稳定版本", "Spark SQL引入", "MLlib改进", "用于图处理的GraphX"],
+      },
+    },
+  ],
+
+  hbase: [
+    {
+      version: "2.6.2",
+      date: { en: "April 2025", zh: "2025年4月" },
+      highlights: {
+        en: [
+          "Dual file compaction algorithm",
+          "Full and incremental backup support",
+          "TLS encryption and authentication",
+          "Improved quota management",
+          "Performance and stability improvements",
+        ],
+        zh: ["双文件压缩算法", "支持全量和增量备份", "TLS加密和认证", "改进的配额管理", "性能和稳定性改进"],
+      },
+    },
+    {
+      version: "2.5.5",
+      date: { en: "October 2023", zh: "2023年10月" },
+      highlights: {
+        en: [
+          "Performance optimizations",
+          "Bug fixes and stability improvements",
+          "Enhanced security features",
+          "Improved compatibility with Hadoop 3.x",
+        ],
+        zh: ["性能优化", "错误修复和稳定性改进", "增强的安全功能", "改进与Hadoop 3.x的兼容性"],
+      },
+    },
+    {
+      version: "2.0.0",
+      date: { en: "January 2019", zh: "2019年1月" },
+      highlights: {
+        en: [
+          "Off-heap read/write path",
+          "Procedure V2 and improved Master",
+          "RegionServer Group-based assignment",
+          "Improved replication features",
+        ],
+        zh: ["堆外读/写路径", "过程V2和改进的Master", "基于RegionServer组的分配", "改进的复制功能"],
+      },
+    },
+    {
+      version: "1.0.0",
+      date: { en: "February 2015", zh: "2015年2月" },
+      highlights: {
+        en: [
+          "First stable 1.0 release",
+          "Improved performance and stability",
+          "Enhanced security features",
+          "Better integration with Hadoop ecosystem",
+        ],
+        zh: ["首个稳定的1.0版本", "改进的性能和稳定性", "增强的安全功能", "与Hadoop生态系统更好的集成"],
+      },
+    },
+    {
+      version: "0.94.0",
+      date: { en: "May 2012", zh: "2012年5月" },
+      highlights: {
+        en: ["Coprocessors", "Security features", "Performance improvements", "Replication enhancements"],
+        zh: ["协处理器", "安全功能", "性能改进", "复制增强"],
+      },
+    },
+  ],
 }

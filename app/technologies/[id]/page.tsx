@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import VersionHistory from "@/components/version-history"
 import { useLanguage } from "@/contexts/language-context"
-import { t } from "@/lib/translations"
+import { safeT } from "@/lib/i18n"
 import { getTechnology, getAllTechnologies } from "@/services/tech-service"
 import type { Technology } from "@/config/technologies"
 import { iconMap } from "@/config/technologies"
@@ -64,7 +64,7 @@ export default function TechnologyPage() {
           <h1 className="text-3xl font-bold">{language === "zh" ? "未找到技术" : "Technology Not Found"}</h1>
           <Link href="/technologies" className="mt-4 inline-flex items-center gap-2 text-sm font-medium">
             <ArrowLeft className="h-4 w-4" />
-            {t("backToTechnologies", language)}
+            {safeT("backToTechnologies", language, language === "zh" ? "返回技术列表" : "Back to Technologies")}
           </Link>
         </div>
       </div>
@@ -76,9 +76,9 @@ export default function TechnologyPage() {
 
   // 翻译类别名称
   const getCategoryName = (category: string) => {
-    if (category === "collection") return t("dataCollection", language)
-    if (category === "processing") return t("dataProcessing", language)
-    if (category === "visualization") return t("dataVisualization", language)
+    if (category === "collection") return safeT("dataCollection", language)
+    if (category === "processing") return safeT("dataProcessing", language)
+    if (category === "visualization") return safeT("dataVisualization", language)
     return category
   }
 
@@ -87,7 +87,7 @@ export default function TechnologyPage() {
       <div className="mb-8">
         <Link href="/technologies" className="inline-flex items-center gap-2 text-sm font-medium">
           <ArrowLeft className="h-4 w-4" />
-          {t("backToTechnologies", language)}
+          {safeT("backToTechnologies", language, language === "zh" ? "返回技术列表" : "Back to Technologies")}
         </Link>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mt-4">
           <div className="flex items-center gap-3">
@@ -104,13 +104,13 @@ export default function TechnologyPage() {
             <Button variant="outline" size="sm" asChild>
               <a href={tech.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <ExternalLink className="h-4 w-4" />
-                {t("website", language)}
+                {safeT("website", language)}
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
               <a href={tech.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Github className="h-4 w-4" />
-                {t("github", language)}
+                {safeT("github", language)}
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
@@ -121,7 +121,7 @@ export default function TechnologyPage() {
                 className="flex items-center gap-2"
               >
                 <BookOpen className="h-4 w-4" />
-                {t("docs", language)}
+                {safeT("docs", language)}
               </a>
             </Button>
           </div>
@@ -132,16 +132,16 @@ export default function TechnologyPage() {
         <div className="md:col-span-2">
           <Tabs defaultValue="overview" className="w-full">
             <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="overview">{t("overview", language)}</TabsTrigger>
-              <TabsTrigger value="features">{t("features", language)}</TabsTrigger>
-              <TabsTrigger value="use-cases">{t("useCases", language)}</TabsTrigger>
-              <TabsTrigger value="versions">{t("versions", language)}</TabsTrigger>
+              <TabsTrigger value="overview">{safeT("overview", language)}</TabsTrigger>
+              <TabsTrigger value="features">{safeT("features", language)}</TabsTrigger>
+              <TabsTrigger value="use-cases">{safeT("useCases", language)}</TabsTrigger>
+              <TabsTrigger value="versions">{safeT("versions", language)}</TabsTrigger>
             </TabsList>
             <TabsContent value="overview" className="mt-4">
               <Card>
                 <CardHeader>
                   <CardTitle>
-                    {t("about", language)} {tech.name}
+                    {safeT("about", language)} {tech.name}
                   </CardTitle>
                   <CardDescription>{language === "zh" ? tech.description.zh : tech.description.en}</CardDescription>
                 </CardHeader>
@@ -150,10 +150,10 @@ export default function TechnologyPage() {
                     <p>
                       {tech.name} {language === "zh" ? "是一个强大的" : "is a powerful"}{" "}
                       {tech.category === "collection"
-                        ? t("dataCollection", language).toLowerCase()
+                        ? safeT("dataCollection", language).toLowerCase()
                         : tech.category === "processing"
-                          ? t("dataProcessing", language).toLowerCase()
-                          : t("dataVisualization", language).toLowerCase()}{" "}
+                          ? safeT("dataProcessing", language).toLowerCase()
+                          : safeT("dataVisualization", language).toLowerCase()}{" "}
                       {language === "zh"
                         ? `工具，由 ${tech.developedBy} 开发。最初发布于 ${tech.initialRelease} 年，它已经发展成为大数据生态系统中的领先解决方案之一。`
                         : `tool developed by ${tech.developedBy}. Initially released in ${tech.initialRelease}, it has evolved to become one of the leading solutions in the big data ecosystem.`}
@@ -170,8 +170,10 @@ export default function TechnologyPage() {
             <TabsContent value="features" className="mt-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>{t("keyFeatures", language)}</CardTitle>
-                  <CardDescription>{t("whatMakesStandOut", language, { name: tech.name })}</CardDescription>
+                  <CardTitle>{safeT("keyFeatures", language)}</CardTitle>
+                  <CardDescription>
+                    {safeT("whatMakesStandOut", language, undefined, { name: tech.name })}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="grid gap-2">
@@ -190,8 +192,10 @@ export default function TechnologyPage() {
             <TabsContent value="use-cases" className="mt-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>{t("commonUseCases", language)}</CardTitle>
-                  <CardDescription>{t("howUsedInProduction", language, { name: tech.name })}</CardDescription>
+                  <CardTitle>{safeT("commonUseCases", language)}</CardTitle>
+                  <CardDescription>
+                    {safeT("howUsedInProduction", language, undefined, { name: tech.name })}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="grid gap-2">
@@ -210,8 +214,8 @@ export default function TechnologyPage() {
             <TabsContent value="versions" className="mt-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>{t("versionHistory", language)}</CardTitle>
-                  <CardDescription>{t("releaseTimeline", language)}</CardDescription>
+                  <CardTitle>{safeT("versionHistory", language)}</CardTitle>
+                  <CardDescription>{safeT("releaseTimeline", language)}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <VersionHistory techId={tech.id} />
@@ -224,28 +228,32 @@ export default function TechnologyPage() {
         <div>
           <Card>
             <CardHeader>
-              <CardTitle>{t("quickInfo", language)}</CardTitle>
+              <CardTitle>{safeT("quickInfo", language)}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4">
                 <div>
                   <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    {t("initialRelease", language)}
+                    {safeT("initialRelease", language)}
                   </h3>
                   <p className="mt-1">{tech.initialRelease}</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    {t("latestVersion", language)}
+                    {safeT("latestVersion", language)}
                   </h3>
                   <p className="mt-1">{tech.latestVersion}</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t("developedBy", language)}</h3>
+                  <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                    {safeT("developedBy", language)}
+                  </h3>
                   <p className="mt-1">{tech.developedBy}</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t("category", language)}</h3>
+                  <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                    {safeT("category", language)}
+                  </h3>
                   <p className="mt-1 capitalize">{getCategoryName(tech.category)}</p>
                 </div>
               </div>
@@ -254,7 +262,7 @@ export default function TechnologyPage() {
 
           <Card className="mt-6">
             <CardHeader>
-              <CardTitle>{t("relatedTechnologies", language)}</CardTitle>
+              <CardTitle>{safeT("relatedTechnologies", language)}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid gap-2">

@@ -26,6 +26,7 @@ export const resources = {
     videos: "Videos",
     community: "Community",
     visitResource: "Ressource besuchen",
+    documentation: "Dokumentation",
   },
   fr: {
     // Resources page
@@ -35,6 +36,7 @@ export const resources = {
     videos: "Vidéos",
     community: "Communauté",
     visitResource: "Visiter la ressource",
+    documentation: "Documentation",
   },
   es: {
     // Resources page
@@ -44,5 +46,6 @@ export const resources = {
     videos: "Vídeos",
     community: "Comunidad",
     visitResource: "Visitar recurso",
+    documentation: "Documentación",
   },
 }
