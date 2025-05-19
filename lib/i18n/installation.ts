@@ -73,4 +73,121 @@ export const installation = {
     automationDesc: "考虑使用基础设施即代码和CI/CD管道来自动化测试和部署更新。",
     containerTip: '对于容器化部署，考虑使用指定确切版本的镜像标签，而不是使用"latest"标签，以确保可重现的部署。',
   },
+  de: {
+    // Installation page
+    installationTitle: "Installationsanleitungen",
+    installationSubtitle:
+      "Schrittweise Installationsanleitungen für Big-Data-Technologien, einschließlich eigenständiger und containerisierter Optionen",
+    installationOptions: "Installationsoptionen für {name}",
+    standalone: "Eigenständig",
+    container: "Container",
+    systemRequirements: "Systemanforderungen",
+    quickInstall: "Schnellinstallation",
+    docker: "Docker",
+    dockerCompose: "Docker Compose",
+    dockerComposeDesc:
+      "Verfügbar im offiziellen GitHub-Repository mit Beispielkonfigurationen für Produktionsbereitstellungen.",
+    officialInstallGuide: "Offizielle Installationsanleitung",
+    versionUpdateResources: "Ressourcen für Versionsupdates",
+    versionUpdateDesc: "Offizielle Ressourcen, um mit den neuesten Versionen auf dem Laufenden zu bleiben",
+    officialReleasePages: "Offizielle Release-Seiten",
+    releaseNotesChangelogs: "Release Notes & Changelogs",
+    downloads: "Downloads",
+    releaseNotes: "Release Notes",
+    keepingUpToDate: "Technologien auf dem neuesten Stand halten",
+    upToDateDesc: "Best Practices für die Aktualisierung Ihrer Big-Data-Infrastruktur",
+    bestPracticesTitle: "Best Practices",
+    subscribeMailing: "Mailinglisten abonnieren",
+    subscribingDesc:
+      "Die meisten Apache-Projekte führen Mailinglisten, in denen sie neue Releases und Sicherheitsupdates ankündigen.",
+    followReleaseNotes: "Release Notes verfolgen",
+    followingDesc: "Lesen Sie vor einem Upgrade immer die Release Notes, um Breaking Changes und neue Funktionen zu verstehen.",
+    testStaging: "In Staging-Umgebung testen",
+    testingDesc: "Testen Sie Upgrades immer in einer Staging-Umgebung, bevor Sie sie in der Produktion anwenden.",
+    backupData: "Daten sichern",
+    backupDesc: "Erstellen Sie Backups, bevor Sie größere Versions-Upgrades durchführen.",
+    useAutomation: "Automatisierung verwenden",
+    automationDesc:
+      "Erwägen Sie die Verwendung von Infrastructure as Code und CI/CD-Pipelines, um das Testen und Bereitstellen von Updates zu automatisieren.",
+    containerTip:
+      'Verwenden Sie für containerisierte Bereitstellungen Image-Tags, die genaue Versionen angeben, anstatt das "latest"-Tag zu verwenden, um reproduzierbare Bereitstellungen zu gewährleisten.',
+  },
+  fr: {
+    // Installation page
+    installationTitle: "Guides d'installation",
+    installationSubtitle:
+      "Guides d'installation étape par étape pour les technologies Big Data, y compris les options autonomes et conteneurisées",
+    installationOptions: "Options d'installation pour {name}",
+    standalone: "Autonome",
+    container: "Conteneur",
+    systemRequirements: "Configuration requise",
+    quickInstall: "Installation rapide",
+    docker: "Docker",
+    dockerCompose: "Docker Compose",
+    dockerComposeDesc:
+      "Disponible dans le dépôt GitHub officiel avec des exemples de configurations pour les déploiements en production.",
+    officialInstallGuide: "Guide d'installation officiel",
+    versionUpdateResources: "Ressources de mise à jour de version",
+    versionUpdateDesc: "Ressources officielles pour rester à jour avec les dernières versions",
+    officialReleasePages: "Pages de versions officielles",
+    releaseNotesChangelogs: "Notes de version & journaux des modifications",
+    downloads: "Téléchargements",
+    releaseNotes: "Notes de version",
+    keepingUpToDate: "Maintenir les technologies à jour",
+    upToDateDesc: "Meilleures pratiques pour mettre à jour votre infrastructure Big Data",
+    bestPracticesTitle: "Meilleures pratiques",
+    subscribeMailing: "S'abonner aux listes de diffusion",
+    subscribingDesc:
+      "La plupart des projets Apache maintiennent des listes de diffusion où ils annoncent les nouvelles versions et les mises à jour de sécurité.",
+    followReleaseNotes: "Suivre les notes de version",
+    followingDesc: "Lisez toujours les notes de version avant de mettre à niveau pour comprendre les changements majeurs et les nouvelles fonctionnalités.",
+    testStaging: "Tester en préproduction",
+    testingDesc: "Testez toujours les mises à niveau dans un environnement de préproduction avant de les appliquer en production.",
+    backupData: "Sauvegarder les données",
+    backupDesc: "Créez des sauvegardes avant d'effectuer des mises à niveau de version majeures.",
+    useAutomation: "Utiliser l'automatisation",
+    automationDesc:
+      "Envisagez d'utiliser l'infrastructure en tant que code et les pipelines CI/CD pour automatiser les tests et le déploiement des mises à jour.",
+    containerTip:
+      "Pour les déploiements conteneurisés, envisagez d'utiliser des tags d'image qui spécifient des versions exactes plutôt que d'utiliser le tag \"latest\" pour assurer des déploiements reproductibles."
+  },
+  es: {
+    // Installation page
+    installationTitle: "Guías de instalación",
+    installationSubtitle:
+      "Guías de instalación paso a paso para tecnologías de Big Data, incluyendo opciones independientes y en contenedores",
+    installationOptions: "Opciones de instalación para {name}",
+    standalone: "Independiente",
+    container: "Contenedor",
+    systemRequirements: "Requisitos del sistema",
+    quickInstall: "Instalación rápida",
+    docker: "Docker",
+    dockerCompose: "Docker Compose",
+    dockerComposeDesc:
+      "Disponible en el repositorio oficial de GitHub con configuraciones de ejemplo para despliegues en producción.",
+    officialInstallGuide: "Guía de instalación oficial",
+    versionUpdateResources: "Recursos de actualización de versiones",
+    versionUpdateDesc: "Recursos oficiales para mantenerse al día con las últimas versiones",
+    officialReleasePages: "Páginas oficiales de lanzamiento",
+    releaseNotesChangelogs: "Notas de lanzamiento y registros de cambios",
+    downloads: "Descargas",
+    releaseNotes: "Notas de lanzamiento",
+    keepingUpToDate: "Mantener las tecnologías actualizadas",
+    upToDateDesc: "Mejores prácticas para actualizar su infraestructura de Big Data",
+    bestPracticesTitle: "Mejores prácticas",
+    subscribeMailing: "Suscribirse a listas de correo",
+    subscribingDesc:
+      "La mayoría de los proyectos Apache mantienen listas de correo donde anuncian nuevos lanzamientos y actualizaciones de seguridad.",
+    followReleaseNotes: "Seguir las notas de lanzamiento",
+    followingDesc: "Lea siempre las notas de lanzamiento antes de actualizar para entender los cambios importantes y las nuevas funcionalidades.",
+    testStaging: "Probar en entorno de pruebas",
+    testingDesc: "Pruebe siempre las actualizaciones en un entorno de pruebas antes de aplicarlas a producción.",
+    backupData: "Hacer copias de seguridad",
+    backupDesc: "Cree copias de seguridad antes de realizar cualquier actualización de versión importante.",
+    useAutomation: "Usar automatización",
+    automationDesc:
+      "Considere usar infraestructura como código y pipelines CI/CD para automatizar las pruebas y el despliegue de actualizaciones.",
+    containerTip:
+      'Para despliegues en contenedores, considere usar etiquetas de imagen que especifiquen versiones exactas en lugar de usar la etiqueta "latest" para garantizar despliegues reproducibles.'
+  },
 }
