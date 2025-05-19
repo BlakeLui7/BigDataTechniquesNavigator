@@ -37,8 +37,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         setLanguage("fr")
       } else if (browserLanguage === "es") {
         setLanguage("es")
+      } else {
+        // Default to English if no match or detection fails
+        setLanguage("en")
       }
-      // Default to English if no match
     }
   }, [])
 

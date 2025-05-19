@@ -79,8 +79,20 @@ export type TranslationKey = keyof typeof translations.en
  * @returns 翻译后的文本
  */
 export function t(key: TranslationKey, language: LanguageKey, params?: Record<string, string>): string {
-  let text = translations[language][key] || translations.en[key] || key
+  // 首先尝试使用指定语言的翻译
+  let text = translations[language]?.[key]
 
+  // 如果指定语言没有该翻译，回退到英语
+  if (!text && language !== "en") {
+    text = translations.en[key]
+  }
+
+  // 如果英语也没有该翻译，则使用键名作为最后的回退
+  if (!text) {
+    text = key
+  }
+
+  // 替换参数
   if (params) {
     Object.entries(params).forEach(([param, value]) => {
       text = text.replace(`{${param}}`, value)
